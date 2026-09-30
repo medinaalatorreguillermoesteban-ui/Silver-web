@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Silver - Inicio | Outcome Memories</title>
+    <style>
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    color: #222222;
+}
+
+header {
+    background: #12345b;
+    color: white;
+    padding: 15px;
+    border-bottom: 3px solid #d4af37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #f0d36a;
+}
+
+.barra-navegacion {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.botoncito-nav {
+    background: #1d4f80;
+    color: white;
+    text-decoration: none;
+    padding: 7px 10px;
+    border: 1px solid #d4af37;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.botoncito-nav.activo {
+    background: #d4af37;
+}
+
+.logo-cabecera {
+    width: 100px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    min-height: 500px;
+}
+
+aside {
+    width: 25%;
+    background: #174a78;
+    padding: 15px;
+    border-right: 2px solid #d4af37;
+}
+
+section {
+    width: 75%;
+    background: white;
+    padding: 18px;
+}
+
+.sidebar-widget {
+    background: #e7eef5;
+    border: 1px solid #d4af37;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.sidebar-widget h4 {
+    margin-top: 0;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 5px;
+}
+
+.sidebar-list {
+    padding-left: 18px;
+    margin: 0;
+    font-size: 13px;
+}
+
+.sidebar-list li {
+    padding: 5px 0;
+}
+
+.sidebar-list a {
+    color: #12345b;
+    text-decoration: none;
+}
+
+.ad-container {
+    text-decoration: none;
+    display: block;
+}
+
+.ad-dr-pepper {
+    background: #8b0000;
+    color: white;
+    border: 1px solid #550000;
+    padding: 12px;
+    text-align: center;
+}
+
+.ad-img {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    margin: 8px auto;
+    display: block;
+}
+
+.ad-tag {
+    background: white;
+    color: #333333;
+    font-size: 10px;
+    padding: 2px 5px;
+}
+
+.ad-dr-pepper h3 {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.ad-dr-pepper p {
+    font-size: 12px;
+}
+
+.ad-btn {
+    background: #eeeeee;
+    color: #333333;
+    padding: 5px 9px;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.hero-card, .ability-card, .lore-card {
+    background: #f5f5f5;
+    border: 1px solid #bbbbbb;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.hero-card {
+    border-left: 4px solid #777777;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.stat-card {
+    background: #eeeeee;
+    border: 1px solid #bbbbbb;
+    padding: 10px;
+    text-align: center;
+}
+
+.stat-title {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.stat-value {
+    font-size: 14px;
+}
+
+.skills-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.skill-mini-card {
+    background: white;
+    border-left: 3px solid #777777;
+    border-bottom: 1px solid #cccccc;
+    padding: 10px;
+}
+
+.btn-cta, .btn-volver-inicio {
+    display: inline-block;
+    background: #555555;
+    color: white;
+    text-decoration: none;
+    padding: 7px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.ability-card {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.ability-info {
+    flex: 1;
+}
+
+.ability-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+.ability-key {
+    background: #dddddd;
+    border: 1px solid #aaaaaa;
+    padding: 2px 6px;
+    font-size: 11px;
+}
+
+.ability-media {
+    width: 180px;
+    height: 105px;
+    overflow: hidden;
+    border: 1px solid #999999;
+    flex-shrink: 0;
+}
+
+.ability-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lore-header {
+    background: #eeeeee;
+    border: 1px solid #bbbbbb;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.lore-card h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #bbbbbb;
+    padding-bottom: 6px;
+}
+
+.quote-box {
+    background: #eeeeee;
+    border-left: 3px solid #777777;
+    padding: 10px;
+    margin: 12px 0;
+    font-style: italic;
+}
+
+footer {
+    background: #333333;
+    color: white;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    main { display: block; }
+    aside, section { width: 100%; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .ability-card { display: block; }
+    .ability-media { margin-top: 10px; }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Silver - Outcome Memories</h1>
+            <nav class="barra-navegacion">
+                <a href="guille(5).html" class="botoncito-nav activo">Inicio</a>
+                <a href="guille2(5).html" class="botoncito-nav">Habilidades</a>
+                <a href="guille3(5).html" class="botoncito-nav">Lore</a>
+            </nav>
+        </div>
+        <img src="https://static.wikia.nocookie.net/the-unofficial-outcome-memories/images/6/66/Silverthing.png/revision/latest/scale-to-width-down/177?cb=20260112221016" alt="Silver Logo" class="logo-cabecera">
+    </header>
+
+    <main>
+        <aside><!-- ANUNCIO DR PEPPER -->
+            <a href="https://www.drpepper.com" target="_blank" class="ad-container">
+                <div class="ad-dr-pepper">
+                    <span class="ad-tag">Patrocinado</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTen3jeFXAuI03xZsaokCtEzJNbBY7BWpGC5aTfCnquUw&s=10" alt="Dr Pepper Logo" class="ad-img">
+                    <h3>Dr Pepper</h3>
+                    <p>¡El sabor psicocinético de 23 sabores para recargar tu energía!</p>
+                    <span class="ad-btn">Ir al sitio ↗</span>
+                </div>
+            </a>
+        </aside>
+
+        <section>
+            <article>
+                <div class="hero-card">
+                    <span class="badge-tag">Sobreviviente Principal</span>
+                    <h2>Silver the Hedgehog</h2>
+                    <p>
+                        Silver domina el campo de batalla mediante poderes psicocinéticos en <strong>Outcome Memories</strong>.
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card"><div class="stat-title">Salud</div><div class="stat-value">105 HP</div></div>
+                    <div class="stat-card"><div class="stat-title">Velocidad</div><div class="stat-value">Normal</div></div>
+                    <div class="stat-card"><div class="stat-title">Energía</div><div class="stat-value">Barra Teal</div></div>
+                    <div class="stat-card"><div class="stat-title">Rol</div><div class="stat-value">Control</div></div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Correo:Crakedempire@gmail.com
+            Numero: 664 797 8827
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Silver - Lore Completo | Outcome Memories & Comics</title>
+    <style>
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    color: #222222;
+}
+
+header {
+    background: #12345b;
+    color: white;
+    padding: 15px;
+    border-bottom: 3px solid #d4af37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #f0d36a;
+}
+
+.barra-navegacion {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.botoncito-nav {
+    background: #1d4f80;
+    color: white;
+    text-decoration: none;
+    padding: 7px 10px;
+    border: 1px solid #d4af37;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.botoncito-nav.activo {
+    background: #d4af37;
+}
+
+.logo-cabecera {
+    width: 180px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    min-height: 500px;
+}
+
+aside {
+    width: 25%;
+    background: #174a78;
+    padding: 15px;
+    border-right: 2px solid #d4af37;
+}
+
+section {
+    width: 75%;
+    background: white;
+    padding: 18px;
+}
+
+.sidebar-widget {
+    background: #e7eef5;
+    border: 1px solid #d4af37;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.sidebar-widget h4 {
+    margin-top: 0;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 5px;
+}
+
+.sidebar-list {
+    padding-left: 18px;
+    margin: 0;
+    font-size: 13px;
+}
+
+.sidebar-list li {
+    padding: 5px 0;
+}
+
+.sidebar-list a {
+    color: #12345b;
+    text-decoration: none;
+}
+
+.ad-container {
+    text-decoration: none;
+    display: block;
+}
+
+.ad-dr-pepper {
+    background: #8b0000;
+    color: white;
+    border: 1px solid #550000;
+    padding: 12px;
+    text-align: center;
+}
+
+.ad-img {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    margin: 8px auto;
+    display: block;
+}
+
+.ad-tag {
+    background: white;
+    color: #333333;
+    font-size: 10px;
+    padding: 2px 5px;
+}
+
+.ad-dr-pepper h3 {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.ad-dr-pepper p {
+    font-size: 12px;
+}
+
+.ad-btn {
+    background: #eeeeee;
+    color: #333333;
+    padding: 5px 9px;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.hero-card, .ability-card, .lore-card {
+    background: white;
+    border-left: 3px solid #777777;
+    border-bottom: 1px solid #cccccc;
+    padding: 12px;
+    margin-bottom: 18px;
+}
+
+.hero-card {
+    border-left: 4px solid #777777;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.stat-card {
+    background: #eeeeee;
+    border: 1px solid #bbbbbb;
+    padding: 10px;
+    text-align: center;
+}
+
+.stat-title {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.stat-value {
+    font-size: 14px;
+}
+
+.skills-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.skill-mini-card {
+    background: #eeeeee;
+    border: 1px solid #bbbbbb;
+    padding: 10px;
+}
+
+.btn-cta, .btn-volver-inicio {
+    display: inline-block;
+    background: #555555;
+    color: white;
+    text-decoration: none;
+    padding: 7px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.ability-card {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.ability-info {
+    flex: 1;
+}
+
+.ability-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+.ability-key {
+    background: #dddddd;
+    border: 1px solid #aaaaaa;
+    padding: 2px 6px;
+    font-size: 11px;
+}
+
+.ability-media {
+    width: 180px;
+    height: 105px;
+    overflow: hidden;
+    border: 1px solid #999999;
+    flex-shrink: 0;
+}
+
+.ability-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lore-header {
+    background: #eeeeee;
+    border: 1px solid #bbbbbb;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.lore-card h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #bbbbbb;
+    padding-bottom: 6px;
+}
+
+.quote-box {
+    background: #eeeeee;
+    border-left: 3px solid #777777;
+    padding: 10px;
+    margin: 12px 0;
+    font-style: italic;
+}
+
+footer {
+    background: #333333;
+    color: white;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    main { display: block; }
+    aside, section { width: 100%; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .ability-card { display: block; }
+    .ability-media { margin-top: 10px; }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Silver - Outcome Memories</h1>
+            <nav class="barra-navegacion">
+                <a href="guille(5).html" class="botoncito-nav">Inicio</a>
+                <a href="guille2(5).html" class="botoncito-nav">Habilidades</a>
+                <a href="guille3(5).html" class="botoncito-nav activo">Lore</a>
+            </nav>
+        </div>
+        <img src="https://static.wikia.nocookie.net/the-unofficial-outcome-memories/images/5/52/Silver_Title.png/revision/latest?cb=20250812021906" alt="Silver Logo" class="logo-cabecera">
+    </header>
+
+    <main>
+        <aside>
+            <div class="sidebar-widget">
+                <h4>Navegación Lore</h4>
+                <ul class="sidebar-list">
+                    <li><a href="#historia">• Historia de Silver</a></li>
+                    <li><a href="#outcome">• Rol en Outcome Memories</a></li>
+                    <li><a href="#personalidad">• Personalidad y papel</a></li>
+                </ul>
+            </div>
+
+            <!-- ANUNCIO DR PEPPER -->
+            <a href="https://www.drpepper.com" target="_blank" class="ad-container">
+                <div class="ad-dr-pepper">
+                    <span class="ad-tag">Patrocinado</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTen3jeFXAuI03xZsaokCtEzJNbBY7BWpGC5aTfCnquUw&s=10" alt="Dr Pepper Logo" class="ad-img">
+                    <h3>Dr Pepper</h3>
+                    <p>¡El sabor psicocinético de 23 sabores para recargar tu energía!</p>
+                    <span class="ad-btn">Ir al sitio ↗</span>
+                </div>
+            </a>
+        </aside>
+
+        <section>
+            <article>
+                <div class="lore-header">
+                    <h2 style="color:#12345b; margin:0;">Lore de Silver</h2>
+                    <p style="margin-bottom:0;">Una pequeña historia sobre Silver y su papel en Outcome Memories.</p>
+                </div>
+
+                <div class="lore-card" id="historia">
+                    <h3>Historia de Silver</h3>
+                    <p>Silver the Hedgehog es un erizo que viene de un futuro muy diferente al mundo que conocemos. En su época, el futuro estaba destruido y Silver tuvo que aprender a sobrevivir y a usar sus poderes para proteger a los demás.</p>
+                    <p>Una de sus características principales es su psicocinesis. Con ella puede levantar objetos, moverlos a distancia y mantenerse en el aire. También puede usar sus poderes para enfrentarse a enemigos y ayudar a sus compañeros.</p>
+                    <p>Silver ha viajado al pasado en diferentes momentos de su historia. Al principio no siempre conoce toda la situación, pero poco a poco entiende lo que está pasando y busca una forma de cambiar los acontecimientos que pueden provocar un futuro peor.</p>
+                </div>
+
+                <div class="lore-card" id="outcome">
+                    <h3>Silver en Outcome Memories</h3>
+                    <p>En <strong>Outcome Memories</strong>, Silver aparece dentro de un mundo mucho más peligroso. El lugar está lleno de amenazas y los sobrevivientes tienen que usar sus habilidades para escapar y ayudarse entre ellos.</p>
+                    <p>Silver tiene principalmente un rol de apoyo. Sus poderes psicocinéticos le permiten controlar situaciones a distancia, detener enemigos por unos momentos y ayudar a que otros personajes puedan escapar.</p>
+                    <p>Por eso su forma de jugar se basa más en ayudar al equipo que en atacar directamente todo el tiempo. Sus habilidades como Flight, Suspension, Rock Throw y Time Reversal están relacionadas con su capacidad para moverse y controlar lo que ocurre a su alrededor.</p>
+                </div>
+
+                <div class="lore-card" id="personalidad">
+                    <h3>Personalidad y papel</h3>
+                    <p>Silver suele mostrarse decidido cuando tiene que proteger a otras personas. Aunque se encuentra en un lugar desconocido, intenta mantener la calma y usar sus poderes de manera útil.</p>
+                    <p>Dentro de Outcome Memories, esto hace que sea un personaje que puede ayudar a controlar los momentos difíciles. No necesita estar al frente todo el tiempo, ya que puede apoyar desde una distancia segura y abrir oportunidades para sus compañeros.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+     <footer>
+        <p>Correo:Crakedempire@gmail.com
+            Numero: 664 797 8827
+        </p>
+    </footer>
+
+</body>
+</html>
